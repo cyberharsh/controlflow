@@ -91,6 +91,6 @@ RUN julia -e 'import Pkg; Pkg.update()' && \
     fix-permissions "${JULIA_PKGDIR}" "${CONDA_DIR}/share/jupyter"
 
 WORKDIR $HOME
-ADD Conyrol_Flow.ipynb /home/jovyan/work/
+ADD Control_Flow.ipynb /home/jovyan/work/
 ADD startup_funding.csv /home/jovyan/work/
 CMD ["jupyter", "notebook", "--no-browser","--NotebookApp.token=''","--NotebookApp.password=''","--allow-root"]
